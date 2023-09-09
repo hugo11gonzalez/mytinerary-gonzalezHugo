@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../Card'
 import { useState, useEffect } from 'react'
+
 const cardsData = [
   {id: 1, title: 'CARD 1', content: 'Clark Kent', imgUrl: 'https://unsplash.it/200/200'},
   {id: 2, title: 'CARD 2', content: 'Bruce Wayne', imgUrl: 'https://unsplash.it/201/200'},
@@ -16,32 +17,27 @@ const cardsData = [
   {id: 12, title: 'CARD 12', content: 'Lalo Strange', imgUrl: 'https://unsplash.it/198/199'},
 ]
 
-const index = ({id,title,content,imgUrl}) => {
-  
-  
-  let [imgActuales, setImgActuales] = useState([])
-  let [index, setIndex] = useState(0)
-  //const handleClick = ()=> setIndex(index + 4)
-  //let cards = cardsData[index]
+const index = () => {
+  let [imgActuales, setImgActuales] = useState([]);
+  let [currentIndex, setIndex] = useState(0);
   
   useEffect(() => {
-		const interval = setInterval(() => {
-      setImgActuales(cardsData.splice(index, 4))
-      if(index>=8){
-        setIndex(0)
-      }else{
-        setIndex(index + 4)
-      }
-      console.log(index)
-		}, 6000)
+    const interval = setInterval(() => {
+      setImgActuales(cardsData.slice(currentIndex, currentIndex + 4));
+      setIndex(currentIndex === 8 ? 0 : currentIndex + 4);
+    }, 3000);
 
-		return () => {
-			clearInterval(interval)
-		}
-	}, [imgActuales])
+    return () => {
+      clearInterval(interval);
+    }
+  }, [currentIndex]);
+
+  useEffect(() => {
+    console.log(imgActuales);
+  }, [imgActuales]);
 
   return (
-      <div className=" d-flex flex-wrap gap-4 cards-container">
+      <div className="d-flex row gap-4 cards-container">
         {
           imgActuales.map((card) => (
             <Card

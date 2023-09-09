@@ -68,6 +68,6 @@ button:focus-visible {
   }
 }
 */
-main{
-  min-height: 80vh;
+main {
+  min-height: 100vh;
 }
