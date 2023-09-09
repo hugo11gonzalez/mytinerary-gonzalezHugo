@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 const index = () => {
   return (
     <>
-     <Navbar expand="lg" className="bg-body-tertiary d-flex justify-content-between px-5">
+     <Navbar expand="lg" className="bg-info d-flex justify-content-between px-5">
       
         <Navbar.Brand href="#home">MyTinerary</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -13,7 +13,7 @@ const index = () => {
           <Nav className="d-flex justify-content-end w-10">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Cities</Nav.Link>
-            <Nav.Link className="btn btn-sm btn-outline-secondary" href="#link"><span><i className="bi bi-person-circle"></i></span>Login</Nav.Link>
+            <Nav.Link className="btn btn-sm btn-primary text-info-emphasis" href="#link"><span><i className="bi bi-person-circle p-1 "></i></span>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
     
