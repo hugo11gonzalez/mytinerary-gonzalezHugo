@@ -1,6 +1,8 @@
 import React from 'react'
 import Card from '../Card'
 import { useState, useEffect } from 'react'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const cardsData = [
   {id: 1, title: 'CARD 1', content: 'Clark Kent', imgUrl: 'https://unsplash.it/200/200'},
@@ -37,8 +39,10 @@ const index = () => {
   }, [imgActuales]);
 
   return (
-      <div className="d-flex row gap-4 cards-container">
-        {
+    <>
+      <Row xs={1} md={6} className="g-2 gap-1 mx-auto justify-content-center">
+      
+      {
           imgActuales.map((card) => (
             <Card
               key={card.id}
@@ -47,10 +51,12 @@ const index = () => {
               content={ card.content }
               imgUrl={ card.imgUrl } 
             />
-
           ))
         }
-      </div>
+    
+        
+      </Row>
+    </>
   )
 }
 
