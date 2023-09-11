@@ -1,12 +1,12 @@
 import React from 'react'
-import Layout from '../layouts/Layout'
+import SlideShow from '../components/SlideShow'
 const Cities = () => {
   return (
     <>
-        <Layout>
+ 
             
             <SlideShow/>
-        </Layout>
+
     </>
   )
 }

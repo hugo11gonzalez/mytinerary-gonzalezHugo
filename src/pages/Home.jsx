@@ -5,10 +5,8 @@ import SlideShow from '../components/SlideShow'
 const Home = () => {
   return (
     <>
-    <Layout>
         <Hero/>
         <SlideShow/>
-    </Layout>
     </>
   )
 }

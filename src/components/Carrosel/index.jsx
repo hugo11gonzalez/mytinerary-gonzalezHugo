@@ -2,6 +2,8 @@ import React from 'react'
 import Card from '../Card'
 import { useState, useEffect } from 'react'
 import Row from 'react-bootstrap/Row';
+import { Button } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
 
 
 const cardsData = [
@@ -38,21 +40,25 @@ const index = () => {
     console.log(imgActuales);
   }, [imgActuales]);
 
+
+  
   return (
     <>
       <Row xs={1} md={6} className="g-2 gap-1 mx-auto justify-content-center">
       {
           imgActuales.map((card) => (
             <Card
-              key={card.id}
+              key={card.id} 
               id={ card.id }
               title={ card.title }
               content={ card.content }
               imgUrl={ card.imgUrl } 
             />
           ))
+          
         }
       </Row>
+
     </>
   )
 }
@@ -76,11 +82,22 @@ export default index
   return (
     <>
       <div>
-        { (index==0 ||index==4)?
-          <Button onClick={()=>handlerBack()} variant='outline' size='sm'>Atras</Button>:null
+        { (handlerBack ||handlerGo )?
+          <>
+
+          </>
+          :
+          <>
+          </>
 
         }
       </div>
+      <button onClick= {()=> handlerBack()}>Atras</>
+      <button onClick= {()=> handlerGo()}>Avanzar</>
     </>
   )
+
+
+  <Button variant="warning"onClick= {()=> handlerBack()}>Atras</Button>{' '}
+      <Button variant="warning"onClick= {()=> handlerGo()}>Adelante</Button>{' '}
 */

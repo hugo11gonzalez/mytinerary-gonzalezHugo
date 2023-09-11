@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link as Anchor} from 'react-router-dom'
 const index = () => {
   return (
     <>
@@ -13,7 +13,7 @@ const index = () => {
         <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Find the perfect destination</h1>
         <p className="lead">Find your perfect trip, designed by insiders who know and love their cities!" </p>
         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" className="btn btn-warning btn-lg px-4 me-md-2">Find the destination</button>
+          <Anchor className="btn btn-warning btn-lg px-4 me-md-2" to='/cities'>Find the destination</Anchor>
         </div>
       </div>
     </div>

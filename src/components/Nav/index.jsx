@@ -1,12 +1,13 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Anchor from '../Anchor'
+import {Link as Anchor} from 'react-router-dom'
+
 const index = () => {
   let data =[
-    {href: 'home', titulo: 'Home'},
-    {href: 'cities', titulo: 'Cities'},
-    {href: 'login', titulo: 'Login'}
+    {to: '/', titulo: 'Home'},
+    {to: '/cities', titulo: 'Cities'},
+    {to: '/login', titulo: 'Login'}
   ]
   return (
     <>
@@ -16,7 +17,7 @@ const index = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav className="d-flex justify-content-end w-10">
-          {data.map((each, key)=><Anchor key={key} href={each.href} titulo={each.titulo}/>)}
+          {data.map((each, key)=><Anchor className="btn bg-warning gap-4 m-1 rounded" key={key} to={each.to}>{each.titulo}</Anchor>)}
           </Nav>
         </Navbar.Collapse>
     
