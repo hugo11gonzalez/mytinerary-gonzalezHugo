@@ -5,9 +5,9 @@ import {Link as Anchor} from 'react-router-dom'
 
 const index = () => {
   let data =[
-    {to: '/', titulo: 'Home'},
-    {to: '/cities', titulo: 'Cities'},
-    {to: '/login', titulo: 'Login'}
+    {to: '/', titulo: 'Home', icono:'bi bi-house-door'},
+    {to: '/cities', titulo: 'Cities', icono: 'bi bi-buildings'},
+    {to: '/login', titulo: 'Login', icono:'bi bi-person-circle'}
   ]
   return (
     <>
@@ -17,7 +17,7 @@ const index = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav className="d-flex justify-content-end w-10">
-          {data.map((each, key)=><Anchor className="btn bg-warning gap-4 m-1 rounded" key={key} to={each.to}>{each.titulo}</Anchor>)}
+          {data.map((each, key)=><Anchor className="btn bg-warning gap-4 m-1 rounded" key={key} to={each.to}><span className= {each.icono}></span> {each.titulo}</Anchor>)}
           </Nav>
         </Navbar.Collapse>
     
