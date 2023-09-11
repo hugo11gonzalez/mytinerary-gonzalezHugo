@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../Card'
 import { useState, useEffect } from 'react'
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
 
 const cardsData = [
   {id: 1, title: 'CARD 1', content: 'Clark Kent', imgUrl: 'https://unsplash.it/200/200'},
@@ -41,7 +41,6 @@ const index = () => {
   return (
     <>
       <Row xs={1} md={6} className="g-2 gap-1 mx-auto justify-content-center">
-      
       {
           imgActuales.map((card) => (
             <Card
@@ -53,8 +52,6 @@ const index = () => {
             />
           ))
         }
-    
-        
       </Row>
     </>
   )
@@ -62,3 +59,28 @@ const index = () => {
 
 export default index
 
+/*
+  let [step, setStep] = useState (0)
+  let handlerBack = () =>{
+    if(index!=4){
+      setStep(step-4)
+    }
+  }
+  let handlerGo =() => {
+    if(step!=8){
+      setStep(step+4)
+    }
+    }
+  }
+
+  return (
+    <>
+      <div>
+        { (index==0 ||index==4)?
+          <Button onClick={()=>handlerBack()} variant='outline' size='sm'>Atras</Button>:null
+
+        }
+      </div>
+    </>
+  )
+*/

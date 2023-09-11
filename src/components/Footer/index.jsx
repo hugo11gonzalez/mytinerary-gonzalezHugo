@@ -9,12 +9,7 @@ const index = () => {
 
 
 
-                <ul className="nav col-md-4 justify-content-end">
-                <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
-                <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Cities</a></li>
-                <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary"><span><i className="bi bi-person-circle p-1 "></i></span>Login</a></li>
 
-                </ul>
             </footer>
            </div>
     </>
@@ -22,3 +17,12 @@ const index = () => {
 }
 
 export default index
+
+/*
+                <ul className="nav col-md-4 justify-content-end">
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Cities</a></li>
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary"><span><i className="bi bi-person-circle p-1 "></i></span>Login</a></li>
+
+                </ul>
+*/
